@@ -5,6 +5,7 @@ const schedule=require('./models/schedule.model.js')
 const scheduleRoute=require('./Routes/schedule.route.js')
 app.use(express.json())
 app.use("/API",scheduleRoute)
+const PORT=process.env.PORT ||3000
 
 
 
@@ -12,7 +13,7 @@ app.use("/API",scheduleRoute)
   mongoose.connect('mongodb+srv://dineshkumarkalo:L7vQ5kI8OVXKyzWQ@schedule.cebhx.mongodb.net/API?retryWrites=true&w=majority&appName=Schedule')
   .then(() => {
     console.log('Connected to database!')
-    app.listen(3000,()=>{
+    app.listen(PORT,()=>{
         console.log("Server running on 3000")
     })
     
