@@ -6,7 +6,7 @@ const ScheduleSchema= mongoose.Schema({
         required: true
     },
     date:{
-        type: Int32,
+        type: String,
         required: true
     },
     subject:{
